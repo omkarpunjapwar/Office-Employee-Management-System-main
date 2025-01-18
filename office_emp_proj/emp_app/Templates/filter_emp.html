@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://cdn.pixabay.com/photo/2021/05/22/05/48/smartphone-6272608_1280.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav {
+            padding: 25px;
+            background-color: rgb(41, 41, 179);
+            margin: 15px;
+            border-radius: 30px;
+            transition: background-color 0.5s, box-shadow 0.5s;
+        }
+
+        .nav:hover {
+            background-color: rgb(5, 0, 78);
+            box-shadow: 0 0 10px white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .form-container {
+            height: auto;
+            width: 90%;
+            max-width: 350px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 30px;
+            padding: 22px;
+            box-shadow: 0 0 10px white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lab1 {
+            width: 100%;
+            color: white;
+            margin-top: 18px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .in {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+        }
+
+        #submit {
+            background-color: rgb(41, 41, 179);
+            border-radius: 15px;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        #submit:hover {
+            background-color: rgb(5, 0, 78);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul style="display: flex; list-style-type: none;">
+                <li class="nav"><a href="/all_emp">View All Employees</a></li>
+                <li class="nav"><a href="/add_emp">Add An Employee</a></li>
+                <li class="nav"><a href="/remove_emp">Remove An Employee</a></li>
+            </ul>
+        </nav>
+        <div class="form-container">
+            <form action="/filter_emp" method="POST">
+                <label class="lab1" for="name">Employee First/Last Name</label>
+                <input class="in" type="text" id="name" name="name" placeholder="Employee First/Last Name" required aria-label="Employee Name">
+                
+                <label class="lab1" for="department">Department</label>
+                <input class="in" type="text" id="department" name="department" placeholder="Department" required aria-label="Department">
+                
+                <label class="lab1" for="role">Role</label>
+                <input class="in" type="text" id="role" name="role" placeholder="Role" required aria-label="Role">
+                
+                <button class="lab1" id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

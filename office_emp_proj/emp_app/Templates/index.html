@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Employee Management System</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://cdn.pixabay.com/photo/2017/07/25/22/54/lego-2539844_1280.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .nav {
+            padding: 15px 25px;
+            background-color: rgb(41, 41, 179);
+            margin: 10px;
+            border-radius: 30px;
+            transition: background-color 0.5s, box-shadow 0.5s;
+        }
+
+        .nav:hover {
+            background-color: rgb(5, 0, 78);
+            box-shadow: 0 0 10px white, 0 0 8px white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            color: white;
+            font-size: 28px;
+            max-width: 90%;
+        }
+
+        @media (min-width: 600px) {
+            .title {
+                font-size: 35px;
+            }
+
+            .nav {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .title {
+                font-size: 40px;
+            }
+
+            .nav {
+                font-size: 20px;
+                padding: 20px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="title">WELCOME TO OFFICE EMPLOYEE MANAGEMENT SYSTEM</div>
+        </header>
+        <nav>
+            <div class="nav"><a href="/all_emp">View All Employee</a></div>
+            <div class="nav"><a href="/add_emp">Add An Employee</a></div>
+            <div class="nav"><a href="/remove_emp">Remove An Employee</a></div>
+            <div class="nav"><a href="/filter_emp">Filter Employee Details</a></div>
+        </nav>
+    </div>
+</body>
+
+</html>
